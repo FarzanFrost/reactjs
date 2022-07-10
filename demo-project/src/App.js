@@ -3,20 +3,25 @@ import Nav from './Nav'
 import HeroForm from "./HeroForm";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import HeroList from "./HeroList";
+import HeroContextProvider from "./HeroContext";
 function App() {
   return (
 
-      <div>
+      <HeroContextProvider>
 
-          <Nav />
-          <HeroForm />
-          <div className="App">
+          <div>
 
-              <HeroList />
+              <Nav />
+              <HeroForm />
+              <div className="App" style={ {background : "Crimson"} }>
+
+                  <HeroList />
+
+              </div>
 
           </div>
 
-      </div>
+      </HeroContextProvider>
 
   );
 }
