@@ -19,9 +19,15 @@ function HeroContextProvider( props ){
 
     ])
 
+    const addHero = ( name , comic ) => {
+
+        setHeroes( [ ...heroes , { name , comic }] )
+
+    }
+
     return (
 
-        <HeroContext.Provider value={{heroes}}>
+        <HeroContext.Provider value={{heroes , addHero}}>
 
             { props.children }
 
