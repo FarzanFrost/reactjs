@@ -12,20 +12,35 @@ function HeroForm(){
                 <div className="form-group">
 
                     <h5>SuperHero</h5>
-                    <input value={name} className="form-control" type="text"
-                           placeholder="Enter SuperHero" onChange={ (e) => setName( e.target.value )}/>
+                    <input
+                        value={name}
+                        className="form-control"
+                        type="text"
+                        placeholder="Enter SuperHero"
+                        onChange={ (e) => setName( e.target.value )}
+                        required
+                    />
 
                 </div>
 
                 <div className="form-group">
 
                     <h5>Comic</h5>
-                    <input value={comic} className="form-control" type="text"
-                           placeholder="Enter Comic" onChange={ (e) => setComic( e.target.value )}/>
+                    <input
+                        value={comic}
+                        className="form-control"
+                        type="text"
+                        placeholder="Enter Comic"
+                        onChange={ (e) => setComic( e.target.value )}
+                        required
+                    />
 
                 </div>
 
-                <button type="submit" className="btn btn-primary m-2"> Submit </button>
+                <button
+                    type="submit"
+                    className="btn btn-primary mt-2">
+                    Submit </button>
 
             </form>
 
